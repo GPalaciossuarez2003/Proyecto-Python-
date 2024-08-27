@@ -7,12 +7,14 @@ precios = {
 }
 
 pedidos = {
-    "Café": 1,
-    "Té": 0,
-    "Jugo Natural": 1,
-    "Pastel de Chocolate": 1,
-    "Tarta de Frutas": 2,
+    "Café": int(input("Ingrese la cantida de café: ")),
+    "Té": int(input("Ingrese la cantida de té: ")),
+    "Jugo Natural": int(input("Ingrese la cantida de Jugo Natural: ")),
+    "Pastel de Chocolate": int(input("Ingrese la cantida de Pastel de Chocolate: ")),
+    "Tarta de Frutas": int(input("Ingrese la cantida de Tarta de Frutas: ")),
 }
-
+total = 0
 for producto, cantidad in pedidos.items():
-    print(cantidad,precios[producto], cantidad * precios[producto])
+    total += cantidad * precios[producto]
+
+print(total)
