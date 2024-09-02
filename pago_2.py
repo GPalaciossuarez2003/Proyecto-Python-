@@ -6,7 +6,9 @@ total = monto - precio
 
 #Calcular cuantos billetes de 1000 se requieren
 billetes_mil= int(total / 1000)
-monedas = billetes_mil*total/500
+
+#Calcular cuantas monedas de $500 se requieren
+total = total % 1000
 
 #Mostrar el resultado 
 print(f"El vuelto es de {total}")
